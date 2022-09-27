@@ -11,13 +11,17 @@ export default function Home() {
         <meta name="description" content="Studio Ghibli Films" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>Studio Ghibli Films</h1>
+      <video src="/videoBg.mp4" autoPlay loop muted />
+      <div className={`${styles.content} ${styles.title}`}>
+        <h1>SGDB</h1>
+      </div>
+      <div className={`${styles.content} ${styles.description}`}>
         <Link href="/films">
-          <h2 className="text-3xl font-bold underline">Films</h2>
+          <a className={styles.btn}>
+            Explore the Magical World of Studio Ghibli Films <br />→
+          </a>
         </Link>
-      </main>
+      </div>
     </div>
   );
 }

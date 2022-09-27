@@ -5,4 +5,15 @@
 body {
   background-color: black;
   color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  filter: brightness(0.3);
 }

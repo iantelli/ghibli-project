@@ -4,10 +4,10 @@ export default function Film({ film }) {
   console.log(film);
 
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <h1>{film.title}</h1>
       <p>{film.description}</p>
-      <img src={film.movie_banner} alt={film.title} width={500} />
+      <img src={film.image} alt={film.title} />
     </div>
   );
 }

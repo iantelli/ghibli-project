@@ -5,9 +5,9 @@ export default function FilmsList({ films }) {
   console.log(films);
   return (
     <div class="flex justify-center w-full">
-      <div class="grid max-w-2xl mx-auto grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      <div class="grid max-w-7xl mx-auto md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-8">
         {films.map((film) => (
-          <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 hover:scale-105 ease-in duration-300">
+          <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 hover:scale-105 ease-in duration-200">
             <Link href={`/films/${film.id}`}>
               <img
                 class="rounded-t-lg"
@@ -29,7 +29,7 @@ export default function FilmsList({ films }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await axios.get("https://ghibliapi.herokuapp.com/films");
   const films = res.data;
   return {
