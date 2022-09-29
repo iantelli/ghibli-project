@@ -1,4 +1,5 @@
 import axios from "axios";
+import Link from "next/link";
 
 export default function Film({ film }) {
   const styles = {
@@ -55,8 +56,10 @@ export default function Film({ film }) {
                 </span>
               </li>
               <li className="flex items-center py-3">
-                <span>Director: {film.director}</span> <br />
-                <span>Producer: {film.producer}</span>
+                <span>
+                  Director: {film.director} <br />
+                  Producer: {film.producer}
+                </span>
               </li>
             </ul>
           </div>
