@@ -29,7 +29,7 @@ export default function FilmsList({ films }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await axios.get("https://ghibliapi.herokuapp.com/films");
   const films = res.data;
   return {
