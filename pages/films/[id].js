@@ -28,7 +28,7 @@ export default function Film({ film }) {
           </div>
           <div className="my-4" />
           <div className="bg-gray-800 p-3 rounded-lg shadow-xl">
-            <h1 class="text-gray-100 font-bold text-xl leading-8 my-1">
+            <h1 className="text-gray-100 font-bold text-xl leading-8 my-1">
               {film.title}
             </h1>
             <h3 className="text-gray-300 font-lg text-semibold leading-6">
@@ -37,10 +37,10 @@ export default function Film({ film }) {
               Release Year: {film.release_date} <br />
               Running Time: {film.running_time} minutes <br />
             </h3>
-            <ul class="bg-gray-600 text-gray-300 hover:text-gray-400 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
-              <li class="flex items-center py-3">
+            <ul className="bg-gray-600 text-gray-300 hover:text-gray-400 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
+              <li className="flex items-center py-3">
                 <span>Score</span>
-                <span class="ml-auto">
+                <span className="ml-auto">
                   <span
                     className={
                       film.rt_score <= 30
@@ -54,7 +54,7 @@ export default function Film({ film }) {
                   </span>
                 </span>
               </li>
-              <li class="flex items-center py-3">
+              <li className="flex items-center py-3">
                 <span>Director: {film.director}</span> <br />
                 <span>Producer: {film.producer}</span>
               </li>
@@ -65,17 +65,17 @@ export default function Film({ film }) {
           <div className="bg-gray-800 p-3 rounded-lg shadow-xl divide-y">
             <div>
               <p>
-                <span class="text-gray-100 font-bold text-xl leading-8 my-6">
+                <span className="text-gray-100 font-bold text-xl leading-8 my-6">
                   Synposis:
                 </span>
               </p>
             </div>
             <div>
-              <h1 class="text-gray-100 font-lg text-lg leading-8 my-4">
+              <h1 className="text-gray-100 font-lg text-lg leading-8 my-4">
                 {film.description}
               </h1>
               <p>
-                <span class="text-gray-100 font-bold text-xl leading-8 my-4">
+                <span className="text-gray-100 font-bold text-xl leading-8 my-4">
                   Movie Banner:
                 </span>
               </p>
