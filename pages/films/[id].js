@@ -1,5 +1,7 @@
 import axios from "axios";
+import Image from "next/image";
 import Link from "next/link";
+import { myLoader } from "./index";
 
 export default function Film({ film }) {
   const styles = {
@@ -20,10 +22,13 @@ export default function Film({ film }) {
         <div className="w-full md:w-3/12 md:mx-2">
           <div className="bg-gray-800 p-3 rounded-lg shadow-xl">
             <div className="image overflow-hidden">
-              <img
+              <Image
+                loader={myLoader}
                 className="h-auto w-full mx-auto"
                 src={film.image}
                 alt={film.title}
+                width={1200}
+                height={1600}
               />
             </div>
           </div>
@@ -84,11 +89,16 @@ export default function Film({ film }) {
               </p>
             </div>
             <div>
-              <img
-                className="h-auto w-full mx-auto my-4"
+              <div className="mt-6 image overflow-hidden">
+              <Image
+                className="h-auto w-full mx-auto"
+                loader={myLoader}
                 src={film.movie_banner}
                 alt={film.title}
+                width={1920}
+                height={1080}
               />
+              </div>
             </div>
           </div>
         </div>
@@ -99,6 +109,7 @@ export default function Film({ film }) {
 
 export async function getServerSideProps({ params }) {
   const id = params.id;
+  console.log(params)
   const res = await axios.get(`https://ghibliapi.herokuapp.com/films/${id}`);
   const film = res.data;
   return {
