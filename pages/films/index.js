@@ -7,7 +7,6 @@ export const myLoader = ({ src }) => {
 }
 
 export default function FilmsList({ films }) {
-  console.log(films);
   return (
     <div className="flex justify-center w-full">
       <div className="grid max-w-7xl mx-auto md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-8">
