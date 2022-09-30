@@ -2,8 +2,8 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
-export const myLoader = ({ src }) => {
-  return `${src}`;
+export const myLoader = ({ src, quality }) => {
+  return `${src}&q=${quality || 50}`;
 }
 
 export default function FilmsList({ films }) {
