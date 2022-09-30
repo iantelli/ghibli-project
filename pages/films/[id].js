@@ -109,7 +109,6 @@ export default function Film({ film }) {
 
 export async function getServerSideProps({ params }) {
   const id = params.id;
-  console.log(params)
   const res = await axios.get(`https://ghibliapi.herokuapp.com/films/${id}`);
   const film = res.data;
   return {

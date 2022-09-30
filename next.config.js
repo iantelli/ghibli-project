@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    loader: 'myLoader',
+    loader: 'akamai',
+    unoptimized: true,
     path: 'https://image.tmdb.org',
   },
 };
