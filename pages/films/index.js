@@ -15,9 +15,9 @@ export default function FilmsList({ films }) {
 
   const styles = {
     nonActive:
-      "rounded-full mx-2 bg-gray-800 px-3 py-4 shadow-lg border-gray-700 border",
+      "rounded-lg mx-2 bg-gray-800 px-3 py-4 shadow-lg border-gray-700 border",
     active:
-      "rounded-full mx-2 bg-gray-800 px-3 py-4 shadow-lg border-gray-700 border border-green-500",
+      "rounded-lg mx-2 bg-gray-800 px-3 py-4 shadow-lg border-gray-700 border border-green-500",
   };
 
   useEffect(() => {

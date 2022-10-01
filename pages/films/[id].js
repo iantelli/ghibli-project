@@ -18,6 +18,13 @@ export default function Film({ film }) {
 
   return (
     <div className="container mx-auto my-5 p-5">
+      <div className="flex justify-start mb-4">
+        <Link href="/films">
+          <button className="rounded-lg mx-2 bg-gray-800 px-4 py-3 shadow-lg border-gray-700 border">
+            Back
+          </button>
+        </Link>
+      </div>
       <div className="md:flex no-wrap md:-mx-2">
         <div className="w-full md:w-3/12 md:mx-2">
           <div className="bg-gray-800 p-3 rounded-lg shadow-xl">
@@ -90,14 +97,14 @@ export default function Film({ film }) {
             </div>
             <div>
               <div className="mt-6 image overflow-hidden">
-              <Image
-                className="h-auto w-full mx-auto"
-                loader={myLoader}
-                src={film.movie_banner}
-                alt={film.title}
-                width={1920}
-                height={1080}
-              />
+                <Image
+                  className="h-auto w-full mx-auto"
+                  loader={myLoader}
+                  src={film.movie_banner}
+                  alt={film.title}
+                  width={1920}
+                  height={1080}
+                />
               </div>
             </div>
           </div>
